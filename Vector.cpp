@@ -19,10 +19,7 @@ void Vector::AddMem() {
 		Value* tmp_mem = new Value[_capacity];
 		memcpy(tmp_mem, _data, _size * sizeof(Value));
 		delete[] _data;
-		//data = new Value[_capacity];
 		_data = tmp_mem;
-		//memcpy(_data, tmp_mem, _size * sizeof(Value));
-		//delete[] tmp_mem;
 	}
 }
 Vector::Vector(const Value* rawArray, const size_t size, float coef) {
